@@ -1,0 +1,1066 @@
+/-----------------------------------------
+| State-action rewards from Q-Learning
+\-----------------------------------------
+
+(('directions', 'right'), ('right', 'forward'), ('left', None), ('onccoming', 'left'), ('light', 'red'))
+ -- forward : -20.44
+ -- right : 0.00
+ -- None : 0.37
+ -- left : -19.87
+
+(('directions', 'left'), ('right', None), ('left', None), ('onccoming', 'forward'), ('light', 'green'))
+ -- forward : -0.11
+ -- right : 0.04
+ -- None : -4.40
+ -- left : 1.79
+
+(('directions', 'left'), ('right', None), ('left', None), ('onccoming', 'forward'), ('light', 'red'))
+ -- forward : -15.53
+ -- right : 0.53
+ -- None : 6.44
+ -- left : -4.82
+
+(('directions', 'right'), ('right', None), ('left', 'forward'), ('onccoming', 'forward'), ('light', 'red'))
+ -- forward : -19.72
+ -- right : 0.00
+ -- None : 0.00
+ -- left : -20.11
+
+(('directions', 'forward'), ('right', 'right'), ('left', None), ('onccoming', 'forward'), ('light', 'green'))
+ -- forward : 0.00
+ -- right : 0.00
+ -- None : -2.24
+ -- left : 0.00
+
+(('directions', 'left'), ('right', 'forward'), ('left', None), ('onccoming', 'left'), ('light', 'green'))
+ -- forward : 0.00
+ -- right : 0.85
+ -- None : 0.00
+ -- left : 0.00
+
+(('directions', 'right'), ('right', None), ('left', 'right'), ('onccoming', 'left'), ('light', 'red'))
+ -- forward : 0.00
+ -- right : 0.00
+ -- None : 0.00
+ -- left : -4.65
+
+(('directions', 'forward'), ('right', 'forward'), ('left', 'left'), ('onccoming', 'right'), ('light', 'green'))
+ -- forward : 0.71
+ -- right : 0.00
+ -- None : 0.00
+ -- left : 0.00
+
+(('directions', 'forward'), ('right', 'left'), ('left', None), ('onccoming', None), ('light', 'green'))
+ -- forward : 0.00
+ -- right : 0.52
+ -- None : -5.27
+ -- left : 0.99
+
+(('directions', 'forward'), ('right', None), ('left', None), ('onccoming', 'left'), ('light', 'green'))
+ -- forward : 2.30
+ -- right : 0.00
+ -- None : 0.00
+ -- left : 0.31
+
+(('directions', 'forward'), ('right', 'forward'), ('left', 'right'), ('onccoming', 'left'), ('light', 'red'))
+ -- forward : 0.00
+ -- right : 0.00
+ -- None : 0.00
+ -- left : -20.05
+
+(('directions', 'right'), ('right', 'right'), ('left', 'forward'), ('onccoming', 'forward'), ('light', 'green'))
+ -- forward : 0.00
+ -- right : 0.00
+ -- None : 0.00
+ -- left : 0.59
+
+(('directions', 'right'), ('right', 'left'), ('left', None), ('onccoming', 'left'), ('light', 'red'))
+ -- forward : 0.00
+ -- right : 1.47
+ -- None : 0.00
+ -- left : -4.80
+
+(('directions', 'right'), ('right', 'forward'), ('left', None), ('onccoming', 'forward'), ('light', 'red'))
+ -- forward : 0.00
+ -- right : 0.00
+ -- None : 1.75
+ -- left : -19.84
+
+(('directions', 'right'), ('right', None), ('left', 'right'), ('onccoming', 'forward'), ('light', 'red'))
+ -- forward : 0.00
+ -- right : 0.00
+ -- None : 0.00
+ -- left : 0.00
+
+(('directions', 'right'), ('right', 'left'), ('left', None), ('onccoming', 'left'), ('light', 'green'))
+ -- forward : 0.00
+ -- right : 0.87
+ -- None : 0.00
+ -- left : 0.00
+
+(('directions', 'forward'), ('right', 'left'), ('left', 'left'), ('onccoming', None), ('light', 'green'))
+ -- forward : 0.00
+ -- right : 0.00
+ -- None : 0.00
+ -- left : 1.04
+
+(('directions', 'left'), ('right', 'forward'), ('left', 'right'), ('onccoming', None), ('light', 'red'))
+ -- forward : 0.00
+ -- right : 0.00
+ -- None : 0.00
+ -- left : -19.85
+
+(('directions', 'right'), ('right', 'right'), ('left', 'left'), ('onccoming', None), ('light', 'red'))
+ -- forward : -4.62
+ -- right : 0.00
+ -- None : 0.00
+ -- left : -4.63
+
+(('directions', 'forward'), ('right', 'forward'), ('left', 'forward'), ('onccoming', None), ('light', 'green'))
+ -- forward : 0.00
+ -- right : 0.00
+ -- None : -2.13
+ -- left : 0.00
+
+(('directions', 'forward'), ('right', 'forward'), ('left', None), ('onccoming', None), ('light', 'red'))
+ -- forward : -19.78
+ -- right : 0.00
+ -- None : 0.50
+ -- left : -20.46
+
+(('directions', 'forward'), ('right', 'forward'), ('left', None), ('onccoming', 'left'), ('light', 'red'))
+ -- forward : -20.36
+ -- right : 0.00
+ -- None : 0.00
+ -- left : 0.00
+
+(('directions', 'left'), ('right', None), ('left', 'left'), ('onccoming', 'right'), ('light', 'green'))
+ -- forward : 0.00
+ -- right : 0.00
+ -- None : -2.93
+ -- left : 0.00
+
+(('directions', 'forward'), ('right', None), ('left', 'left'), ('onccoming', 'left'), ('light', 'red'))
+ -- forward : 0.00
+ -- right : 0.00
+ -- None : 0.00
+ -- left : 0.00
+
+(('directions', 'left'), ('right', None), ('left', 'forward'), ('onccoming', 'left'), ('light', 'green'))
+ -- forward : 0.00
+ -- right : 0.00
+ -- None : 0.00
+ -- left : 1.09
+
+(('directions', 'right'), ('right', None), ('left', 'left'), ('onccoming', 'left'), ('light', 'green'))
+ -- forward : 0.00
+ -- right : 0.00
+ -- None : 0.00
+ -- left : 0.03
+
+(('directions', 'forward'), ('right', None), ('left', None), ('onccoming', 'right'), ('light', 'green'))
+ -- forward : 0.00
+ -- right : 0.00
+ -- None : 0.00
+ -- left : 0.00
+
+(('directions', 'left'), ('right', 'left'), ('left', 'right'), ('onccoming', None), ('light', 'red'))
+ -- forward : 0.00
+ -- right : 0.65
+ -- None : 0.00
+ -- left : 0.00
+
+(('directions', 'right'), ('right', 'left'), ('left', 'left'), ('onccoming', None), ('light', 'green'))
+ -- forward : 0.00
+ -- right : 0.00
+ -- None : 0.00
+ -- left : 0.00
+
+(('directions', 'forward'), ('right', 'forward'), ('left', 'left'), ('onccoming', 'forward'), ('light', 'red'))
+ -- forward : 0.00
+ -- right : 0.00
+ -- None : 0.00
+ -- left : 0.00
+
+(('directions', 'left'), ('right', None), ('left', 'left'), ('onccoming', None), ('light', 'green'))
+ -- forward : 0.00
+ -- right : 0.90
+ -- None : -2.03
+ -- left : 4.78
+
+(('directions', 'forward'), ('right', 'right'), ('left', None), ('onccoming', 'left'), ('light', 'green'))
+ -- forward : 0.00
+ -- right : 0.00
+ -- None : 0.00
+ -- left : 0.00
+
+(('directions', 'left'), ('right', None), ('left', 'left'), ('onccoming', None), ('light', 'red'))
+ -- forward : -5.04
+ -- right : 0.00
+ -- None : 0.00
+ -- left : -5.16
+
+(('directions', 'forward'), ('right', 'left'), ('left', 'left'), ('onccoming', 'forward'), ('light', 'green'))
+ -- forward : 0.00
+ -- right : 0.00
+ -- None : 0.00
+ -- left : 0.05
+
+(('directions', 'left'), ('right', None), ('left', 'right'), ('onccoming', 'left'), ('light', 'green'))
+ -- forward : 0.00
+ -- right : 0.00
+ -- None : -2.19
+ -- left : 0.00
+
+(('directions', 'forward'), ('right', None), ('left', 'forward'), ('onccoming', 'forward'), ('light', 'red'))
+ -- forward : 0.00
+ -- right : 0.00
+ -- None : 0.00
+ -- left : -20.33
+
+(('directions', 'left'), ('right', 'left'), ('left', None), ('onccoming', 'forward'), ('light', 'red'))
+ -- forward : -4.65
+ -- right : 0.00
+ -- None : 0.00
+ -- left : 0.00
+
+(('directions', 'forward'), ('right', 'right'), ('left', 'forward'), ('onccoming', None), ('light', 'green'))
+ -- forward : 0.00
+ -- right : 0.00
+ -- None : 0.00
+ -- left : 0.48
+
+(('directions', 'left'), ('right', 'left'), ('left', 'right'), ('onccoming', 'forward'), ('light', 'red'))
+ -- forward : 0.00
+ -- right : 0.00
+ -- None : 0.00
+ -- left : 0.00
+
+(('directions', 'left'), ('right', None), ('left', None), ('onccoming', 'right'), ('light', 'green'))
+ -- forward : 0.00
+ -- right : 0.00
+ -- None : 0.00
+ -- left : 0.00
+
+(('directions', 'left'), ('right', 'right'), ('left', None), ('onccoming', 'left'), ('light', 'red'))
+ -- forward : 0.00
+ -- right : 1.04
+ -- None : 0.00
+ -- left : 0.00
+
+(('directions', 'right'), ('right', None), ('left', 'left'), ('onccoming', 'forward'), ('light', 'green'))
+ -- forward : 0.00
+ -- right : 0.00
+ -- None : 0.00
+ -- left : 0.13
+
+(('directions', 'left'), ('right', 'right'), ('left', 'forward'), ('onccoming', None), ('light', 'green'))
+ -- forward : 0.00
+ -- right : 0.00
+ -- None : -2.14
+ -- left : 0.00
+
+(('directions', 'forward'), ('right', 'left'), ('left', None), ('onccoming', 'forward'), ('light', 'green'))
+ -- forward : 0.00
+ -- right : 0.00
+ -- None : 0.00
+ -- left : 0.21
+
+(('directions', 'left'), ('right', None), ('left', None), ('onccoming', None), ('light', 'red'))
+ -- forward : -10.55
+ -- right : 0.11
+ -- None : 6.34
+ -- left : 0.00
+
+(('directions', 'left'), ('right', None), ('left', None), ('onccoming', None), ('light', 'green'))
+ -- forward : 0.09
+ -- right : 2.66
+ -- None : -2.60
+ -- left : 0.96
+
+(('directions', 'left'), ('right', None), ('left', 'forward'), ('onccoming', 'right'), ('light', 'green'))
+ -- forward : 1.11
+ -- right : 0.00
+ -- None : 0.00
+ -- left : 0.00
+
+(('directions', 'forward'), ('right', None), ('left', None), ('onccoming', None), ('light', 'red'))
+ -- forward : -5.48
+ -- right : 0.69
+ -- None : 8.37
+ -- left : -5.11
+
+(('directions', 'right'), ('right', 'left'), ('left', None), ('onccoming', None), ('light', 'green'))
+ -- forward : 0.00
+ -- right : 2.07
+ -- None : -2.69
+ -- left : 0.00
+
+(('directions', 'right'), ('right', 'forward'), ('left', 'forward'), ('onccoming', None), ('light', 'red'))
+ -- forward : -20.27
+ -- right : 0.00
+ -- None : 0.00
+ -- left : -20.04
+
+(('directions', 'right'), ('right', None), ('left', None), ('onccoming', 'left'), ('light', 'green'))
+ -- forward : 0.00
+ -- right : 0.36
+ -- None : -4.52
+ -- left : 2.03
+
+(('directions', 'left'), ('right', None), ('left', 'right'), ('onccoming', None), ('light', 'green'))
+ -- forward : 0.00
+ -- right : 0.00
+ -- None : -2.13
+ -- left : 2.26
+
+(('directions', 'left'), ('right', None), ('left', 'forward'), ('onccoming', 'forward'), ('light', 'red'))
+ -- forward : -19.91
+ -- right : -9.73
+ -- None : 0.33
+ -- left : 0.00
+
+(('directions', 'left'), ('right', 'left'), ('left', None), ('onccoming', None), ('light', 'red'))
+ -- forward : 0.00
+ -- right : 0.00
+ -- None : 1.36
+ -- left : 0.00
+
+(('directions', 'left'), ('right', 'forward'), ('left', 'right'), ('onccoming', 'forward'), ('light', 'green'))
+ -- forward : 0.00
+ -- right : 0.00
+ -- None : 0.00
+ -- left : 0.00
+
+(('directions', 'forward'), ('right', 'right'), ('left', 'right'), ('onccoming', 'left'), ('light', 'green'))
+ -- forward : 1.08
+ -- right : 0.00
+ -- None : 0.00
+ -- left : 0.00
+
+(('directions', 'right'), ('right', None), ('left', 'right'), ('onccoming', 'left'), ('light', 'green'))
+ -- forward : 0.00
+ -- right : 0.00
+ -- None : 0.00
+ -- left : 0.00
+
+(('directions', 'left'), ('right', None), ('left', 'right'), ('onccoming', 'left'), ('light', 'red'))
+ -- forward : -5.29
+ -- right : 0.00
+ -- None : 0.00
+ -- left : 0.00
+
+(('directions', 'forward'), ('right', None), ('left', 'forward'), ('onccoming', None), ('light', 'red'))
+ -- forward : 0.00
+ -- right : -10.22
+ -- None : 0.00
+ -- left : 0.00
+
+(('directions', 'right'), ('right', None), ('left', 'left'), ('onccoming', 'right'), ('light', 'red'))
+ -- forward : 0.00
+ -- right : 0.00
+ -- None : 0.00
+ -- left : 0.00
+
+(('directions', 'right'), ('right', None), ('left', 'left'), ('onccoming', 'right'), ('light', 'green'))
+ -- forward : 0.00
+ -- right : 0.00
+ -- None : 0.00
+ -- left : 0.00
+
+(('directions', 'forward'), ('right', None), ('left', 'right'), ('onccoming', 'left'), ('light', 'red'))
+ -- forward : 0.00
+ -- right : 0.00
+ -- None : 0.50
+ -- left : -4.96
+
+(('directions', 'right'), ('right', 'left'), ('left', None), ('onccoming', 'forward'), ('light', 'red'))
+ -- forward : 0.00
+ -- right : 1.97
+ -- None : 0.00
+ -- left : 0.00
+
+(('directions', 'left'), ('right', 'left'), ('left', None), ('onccoming', 'left'), ('light', 'red'))
+ -- forward : -5.45
+ -- right : 0.00
+ -- None : 0.84
+ -- left : -5.28
+
+(('directions', 'forward'), ('right', None), ('left', 'forward'), ('onccoming', 'left'), ('light', 'red'))
+ -- forward : 0.00
+ -- right : 0.00
+ -- None : 0.95
+ -- left : -19.81
+
+(('directions', 'right'), ('right', None), ('left', 'forward'), ('onccoming', 'left'), ('light', 'red'))
+ -- forward : 0.00
+ -- right : 0.00
+ -- None : -0.05
+ -- left : 0.00
+
+(('directions', 'forward'), ('right', 'forward'), ('left', 'left'), ('onccoming', 'left'), ('light', 'red'))
+ -- forward : 0.00
+ -- right : 0.00
+ -- None : 0.00
+ -- left : 0.00
+
+(('directions', 'forward'), ('right', 'right'), ('left', None), ('onccoming', None), ('light', 'red'))
+ -- forward : -4.70
+ -- right : 0.00
+ -- None : 0.00
+ -- left : -5.42
+
+(('directions', 'right'), ('right', None), ('left', None), ('onccoming', None), ('light', 'green'))
+ -- forward : 0.12
+ -- right : 8.87
+ -- None : -8.06
+ -- left : 1.04
+
+(('directions', 'forward'), ('right', 'left'), ('left', 'right'), ('onccoming', 'left'), ('light', 'red'))
+ -- forward : 0.00
+ -- right : 0.00
+ -- None : 0.00
+ -- left : 0.00
+
+(('directions', 'left'), ('right', 'right'), ('left', 'right'), ('onccoming', 'left'), ('light', 'red'))
+ -- forward : 0.00
+ -- right : 0.00
+ -- None : 0.00
+ -- left : -5.11
+
+(('directions', 'forward'), ('right', None), ('left', 'right'), ('onccoming', None), ('light', 'green'))
+ -- forward : 0.00
+ -- right : 0.00
+ -- None : 0.00
+ -- left : 0.92
+
+(('directions', 'right'), ('right', 'forward'), ('left', 'right'), ('onccoming', 'forward'), ('light', 'green'))
+ -- forward : 0.00
+ -- right : 0.00
+ -- None : 0.00
+ -- left : 0.50
+
+(('directions', 'right'), ('right', 'forward'), ('left', None), ('onccoming', 'right'), ('light', 'green'))
+ -- forward : 0.00
+ -- right : 0.00
+ -- None : 0.00
+ -- left : 0.00
+
+(('directions', 'right'), ('right', 'right'), ('left', None), ('onccoming', 'left'), ('light', 'red'))
+ -- forward : 0.00
+ -- right : 1.95
+ -- None : 0.00
+ -- left : 0.00
+
+(('directions', 'forward'), ('right', 'forward'), ('left', 'forward'), ('onccoming', 'forward'), ('light', 'red'))
+ -- forward : 0.00
+ -- right : 0.00
+ -- None : 0.00
+ -- left : -20.11
+
+(('directions', 'right'), ('right', None), ('left', 'right'), ('onccoming', 'forward'), ('light', 'green'))
+ -- forward : 0.00
+ -- right : 0.00
+ -- None : 0.00
+ -- left : 0.54
+
+(('directions', 'forward'), ('right', None), ('left', None), ('onccoming', 'right'), ('light', 'red'))
+ -- forward : -9.49
+ -- right : 0.00
+ -- None : 0.00
+ -- left : 0.00
+
+(('directions', 'left'), ('right', None), ('left', None), ('onccoming', 'left'), ('light', 'green'))
+ -- forward : 0.45
+ -- right : 0.00
+ -- None : -5.02
+ -- left : 1.92
+
+(('directions', 'forward'), ('right', 'left'), ('left', 'forward'), ('onccoming', None), ('light', 'red'))
+ -- forward : 0.00
+ -- right : 0.00
+ -- None : 0.00
+ -- left : -19.64
+
+(('directions', 'right'), ('right', None), ('left', None), ('onccoming', 'right'), ('light', 'red'))
+ -- forward : -4.80
+ -- right : 0.00
+ -- None : 0.00
+ -- left : 0.00
+
+(('directions', 'left'), ('right', 'forward'), ('left', 'right'), ('onccoming', 'left'), ('light', 'green'))
+ -- forward : 0.00
+ -- right : 0.00
+ -- None : 0.00
+ -- left : 0.00
+
+(('directions', 'right'), ('right', 'forward'), ('left', None), ('onccoming', None), ('light', 'red'))
+ -- forward : 0.00
+ -- right : 0.99
+ -- None : 0.05
+ -- left : -19.55
+
+(('directions', 'forward'), ('right', 'forward'), ('left', 'forward'), ('onccoming', None), ('light', 'red'))
+ -- forward : 0.00
+ -- right : 0.00
+ -- None : 0.00
+ -- left : -19.96
+
+(('directions', 'forward'), ('right', 'left'), ('left', None), ('onccoming', 'right'), ('light', 'red'))
+ -- forward : 0.00
+ -- right : 0.00
+ -- None : 0.00
+ -- left : -20.01
+
+(('directions', 'forward'), ('right', 'right'), ('left', None), ('onccoming', 'right'), ('light', 'red'))
+ -- forward : -5.06
+ -- right : 0.00
+ -- None : 0.00
+ -- left : 0.00
+
+(('directions', 'right'), ('right', 'left'), ('left', 'left'), ('onccoming', None), ('light', 'red'))
+ -- forward : 0.00
+ -- right : 0.00
+ -- None : 0.07
+ -- left : -4.58
+
+(('directions', 'left'), ('right', 'left'), ('left', 'right'), ('onccoming', None), ('light', 'green'))
+ -- forward : 0.08
+ -- right : 0.00
+ -- None : 0.00
+ -- left : 0.00
+
+(('directions', 'forward'), ('right', 'right'), ('left', 'left'), ('onccoming', 'left'), ('light', 'green'))
+ -- forward : 0.00
+ -- right : 0.00
+ -- None : 0.00
+ -- left : 0.00
+
+(('directions', 'forward'), ('right', 'right'), ('left', None), ('onccoming', None), ('light', 'green'))
+ -- forward : 0.00
+ -- right : 0.00
+ -- None : 0.00
+ -- left : 0.26
+
+(('directions', 'right'), ('right', None), ('left', None), ('onccoming', None), ('light', 'red'))
+ -- forward : 0.00
+ -- right : 10.41
+ -- None : 1.24
+ -- left : -9.83
+
+(('directions', 'right'), ('right', None), ('left', 'forward'), ('onccoming', 'left'), ('light', 'green'))
+ -- forward : 0.00
+ -- right : 1.08
+ -- None : 0.00
+ -- left : 0.00
+
+(('directions', 'left'), ('right', None), ('left', 'left'), ('onccoming', 'left'), ('light', 'red'))
+ -- forward : 0.00
+ -- right : 0.00
+ -- None : 0.00
+ -- left : 0.00
+
+(('directions', 'left'), ('right', 'left'), ('left', 'forward'), ('onccoming', None), ('light', 'red'))
+ -- forward : 0.00
+ -- right : 0.00
+ -- None : 0.00
+ -- left : -19.92
+
+(('directions', 'left'), ('right', 'left'), ('left', None), ('onccoming', 'forward'), ('light', 'green'))
+ -- forward : 0.00
+ -- right : 0.00
+ -- None : 0.00
+ -- left : 1.29
+
+(('directions', 'right'), ('right', 'left'), ('left', None), ('onccoming', None), ('light', 'red'))
+ -- forward : -4.99
+ -- right : 0.00
+ -- None : 1.01
+ -- left : -5.22
+
+(('directions', 'right'), ('right', 'right'), ('left', 'forward'), ('onccoming', 'left'), ('light', 'red'))
+ -- forward : 0.00
+ -- right : 0.00
+ -- None : 0.00
+ -- left : 0.00
+
+(('directions', 'right'), ('right', 'left'), ('left', None), ('onccoming', 'right'), ('light', 'green'))
+ -- forward : 0.00
+ -- right : 0.00
+ -- None : 0.00
+ -- left : 0.67
+
+(('directions', 'forward'), ('right', 'left'), ('left', None), ('onccoming', 'left'), ('light', 'red'))
+ -- forward : 0.00
+ -- right : 0.00
+ -- None : 0.00
+ -- left : 0.00
+
+(('directions', 'right'), ('right', None), ('left', 'forward'), ('onccoming', None), ('light', 'green'))
+ -- forward : 0.00
+ -- right : 0.00
+ -- None : 0.00
+ -- left : 0.08
+
+(('directions', 'forward'), ('right', 'right'), ('left', 'right'), ('onccoming', 'left'), ('light', 'red'))
+ -- forward : 0.00
+ -- right : 0.00
+ -- None : 0.00
+ -- left : 0.00
+
+(('directions', 'right'), ('right', 'right'), ('left', None), ('onccoming', None), ('light', 'red'))
+ -- forward : 0.00
+ -- right : 1.83
+ -- None : -0.11
+ -- left : -4.54
+
+(('directions', 'right'), ('right', 'forward'), ('left', None), ('onccoming', None), ('light', 'green'))
+ -- forward : 1.16
+ -- right : 0.00
+ -- None : 0.00
+ -- left : 0.00
+
+(('directions', 'forward'), ('right', None), ('left', 'left'), ('onccoming', 'left'), ('light', 'green'))
+ -- forward : 0.00
+ -- right : 0.00
+ -- None : 0.00
+ -- left : 0.15
+
+(('directions', 'forward'), ('right', 'forward'), ('left', 'right'), ('onccoming', None), ('light', 'green'))
+ -- forward : 0.00
+ -- right : 0.00
+ -- None : 0.00
+ -- left : 0.70
+
+(('directions', 'left'), ('right', 'left'), ('left', 'left'), ('onccoming', None), ('light', 'green'))
+ -- forward : 0.00
+ -- right : 0.00
+ -- None : 0.00
+ -- left : 0.56
+
+(('directions', 'right'), ('right', 'right'), ('left', 'right'), ('onccoming', None), ('light', 'red'))
+ -- forward : 0.00
+ -- right : 0.00
+ -- None : 0.42
+ -- left : -4.78
+
+(('directions', 'right'), ('right', 'right'), ('left', 'forward'), ('onccoming', None), ('light', 'green'))
+ -- forward : 0.00
+ -- right : 0.60
+ -- None : 0.00
+ -- left : 0.00
+
+(('directions', 'right'), ('right', None), ('left', None), ('onccoming', 'left'), ('light', 'red'))
+ -- forward : -9.72
+ -- right : 6.04
+ -- None : 1.34
+ -- left : -10.25
+
+(('directions', 'forward'), ('right', None), ('left', 'forward'), ('onccoming', None), ('light', 'green'))
+ -- forward : 0.00
+ -- right : 0.00
+ -- None : 0.00
+ -- left : 1.04
+
+(('directions', 'right'), ('right', 'forward'), ('left', 'forward'), ('onccoming', 'left'), ('light', 'green'))
+ -- forward : 0.00
+ -- right : 0.00
+ -- None : 0.00
+ -- left : 0.47
+
+(('directions', 'left'), ('right', 'left'), ('left', 'forward'), ('onccoming', 'left'), ('light', 'red'))
+ -- forward : 0.00
+ -- right : 0.00
+ -- None : 0.00
+ -- left : 0.00
+
+(('directions', 'left'), ('right', 'right'), ('left', 'forward'), ('onccoming', 'left'), ('light', 'green'))
+ -- forward : 0.00
+ -- right : 0.00
+ -- None : 0.00
+ -- left : 0.00
+
+(('directions', 'forward'), ('right', 'forward'), ('left', None), ('onccoming', 'right'), ('light', 'red'))
+ -- forward : 0.00
+ -- right : 0.00
+ -- None : 0.00
+ -- left : -19.77
+
+(('directions', 'forward'), ('right', 'right'), ('left', 'left'), ('onccoming', 'right'), ('light', 'green'))
+ -- forward : 0.00
+ -- right : 0.00
+ -- None : 0.00
+ -- left : 0.22
+
+(('directions', 'forward'), ('right', None), ('left', 'left'), ('onccoming', None), ('light', 'red'))
+ -- forward : -5.05
+ -- right : 0.00
+ -- None : 0.83
+ -- left : -9.40
+
+(('directions', 'right'), ('right', None), ('left', 'right'), ('onccoming', None), ('light', 'red'))
+ -- forward : 0.00
+ -- right : 0.00
+ -- None : 1.29
+ -- left : -5.45
+
+(('directions', 'right'), ('right', 'forward'), ('left', None), ('onccoming', 'left'), ('light', 'green'))
+ -- forward : 0.00
+ -- right : 0.00
+ -- None : 0.00
+ -- left : 0.56
+
+(('directions', 'forward'), ('right', None), ('left', None), ('onccoming', 'forward'), ('light', 'green'))
+ -- forward : 0.00
+ -- right : 0.00
+ -- None : 0.00
+ -- left : 0.00
+
+(('directions', 'forward'), ('right', 'forward'), ('left', 'left'), ('onccoming', None), ('light', 'green'))
+ -- forward : 0.89
+ -- right : 0.00
+ -- None : 0.00
+ -- left : 0.00
+
+(('directions', 'right'), ('right', None), ('left', 'right'), ('onccoming', 'right'), ('light', 'green'))
+ -- forward : 0.00
+ -- right : 0.00
+ -- None : 0.00
+ -- left : -0.00
+
+(('directions', 'right'), ('right', 'left'), ('left', 'forward'), ('onccoming', None), ('light', 'red'))
+ -- forward : 0.00
+ -- right : 0.00
+ -- None : 0.58
+ -- left : -19.92
+
+(('directions', 'forward'), ('right', 'forward'), ('left', 'left'), ('onccoming', 'forward'), ('light', 'green'))
+ -- forward : 0.00
+ -- right : 0.00
+ -- None : 0.00
+ -- left : 0.46
+
+(('directions', 'left'), ('right', None), ('left', 'right'), ('onccoming', 'forward'), ('light', 'green'))
+ -- forward : 0.00
+ -- right : 0.00
+ -- None : -2.46
+ -- left : 0.00
+
+(('directions', 'left'), ('right', None), ('left', 'forward'), ('onccoming', None), ('light', 'green'))
+ -- forward : 0.00
+ -- right : 0.96
+ -- None : 0.00
+ -- left : 0.00
+
+(('directions', 'left'), ('right', 'left'), ('left', 'left'), ('onccoming', None), ('light', 'red'))
+ -- forward : 0.00
+ -- right : 0.64
+ -- None : 0.00
+ -- left : 0.00
+
+(('directions', 'right'), ('right', 'left'), ('left', 'forward'), ('onccoming', 'right'), ('light', 'red'))
+ -- forward : 0.00
+ -- right : 0.00
+ -- None : 0.02
+ -- left : -20.00
+
+(('directions', 'left'), ('right', None), ('left', 'right'), ('onccoming', None), ('light', 'red'))
+ -- forward : 0.00
+ -- right : -0.09
+ -- None : 0.00
+ -- left : 0.00
+
+(('directions', 'right'), ('right', 'forward'), ('left', 'left'), ('onccoming', None), ('light', 'red'))
+ -- forward : 0.00
+ -- right : 0.00
+ -- None : 0.77
+ -- left : -20.32
+
+(('directions', 'right'), ('right', None), ('left', 'left'), ('onccoming', None), ('light', 'green'))
+ -- forward : 0.00
+ -- right : 0.00
+ -- None : 0.00
+ -- left : 0.65
+
+(('directions', 'right'), ('right', 'left'), ('left', 'forward'), ('onccoming', None), ('light', 'green'))
+ -- forward : 0.00
+ -- right : 0.00
+ -- None : 0.00
+ -- left : 0.30
+
+(('directions', 'forward'), ('right', 'right'), ('left', 'right'), ('onccoming', None), ('light', 'green'))
+ -- forward : 0.00
+ -- right : 0.00
+ -- None : 0.00
+ -- left : 0.04
+
+(('directions', 'forward'), ('right', None), ('left', 'left'), ('onccoming', 'right'), ('light', 'red'))
+ -- forward : 0.00
+ -- right : 0.00
+ -- None : 0.00
+ -- left : -20.19
+
+(('directions', 'forward'), ('right', None), ('left', 'left'), ('onccoming', 'right'), ('light', 'green'))
+ -- forward : 0.00
+ -- right : 0.00
+ -- None : 0.00
+ -- left : -0.11
+
+(('directions', 'left'), ('right', 'forward'), ('left', 'forward'), ('onccoming', None), ('light', 'green'))
+ -- forward : 0.00
+ -- right : 0.00
+ -- None : 0.00
+ -- left : 1.35
+
+(('directions', 'right'), ('right', 'left'), ('left', 'forward'), ('onccoming', 'left'), ('light', 'red'))
+ -- forward : -19.85
+ -- right : -10.08
+ -- None : 0.00
+ -- left : 0.00
+
+(('directions', 'left'), ('right', 'left'), ('left', None), ('onccoming', 'left'), ('light', 'green'))
+ -- forward : 0.00
+ -- right : 0.00
+ -- None : 0.00
+ -- left : 0.20
+
+(('directions', 'forward'), ('right', 'right'), ('left', 'left'), ('onccoming', None), ('light', 'red'))
+ -- forward : 0.00
+ -- right : 0.59
+ -- None : 0.00
+ -- left : 0.00
+
+(('directions', 'right'), ('right', None), ('left', 'forward'), ('onccoming', None), ('light', 'red'))
+ -- forward : 0.00
+ -- right : -9.53
+ -- None : 1.80
+ -- left : -20.02
+
+(('directions', 'right'), ('right', 'forward'), ('left', None), ('onccoming', 'forward'), ('light', 'green'))
+ -- forward : 0.00
+ -- right : 0.00
+ -- None : 0.00
+ -- left : 0.00
+
+(('directions', 'right'), ('right', None), ('left', None), ('onccoming', 'forward'), ('light', 'red'))
+ -- forward : -15.11
+ -- right : 4.30
+ -- None : 0.00
+ -- left : -4.90
+
+(('directions', 'left'), ('right', 'right'), ('left', None), ('onccoming', None), ('light', 'red'))
+ -- forward : 0.00
+ -- right : 0.09
+ -- None : 0.00
+ -- left : -5.00
+
+(('directions', 'forward'), ('right', None), ('left', 'right'), ('onccoming', None), ('light', 'red'))
+ -- forward : 0.00
+ -- right : 0.94
+ -- None : 0.00
+ -- left : 0.00
+
+(('directions', 'right'), ('right', 'left'), ('left', None), ('onccoming', 'right'), ('light', 'red'))
+ -- forward : 0.00
+ -- right : 0.00
+ -- None : -0.00
+ -- left : 0.00
+
+(('directions', 'right'), ('right', None), ('left', 'left'), ('onccoming', 'left'), ('light', 'red'))
+ -- forward : 0.00
+ -- right : 0.00
+ -- None : 0.00
+ -- left : 0.00
+
+(('directions', 'left'), ('right', 'right'), ('left', 'right'), ('onccoming', None), ('light', 'green'))
+ -- forward : 0.00
+ -- right : 0.00
+ -- None : 0.00
+ -- left : 0.80
+
+(('directions', 'right'), ('right', 'forward'), ('left', 'left'), ('onccoming', None), ('light', 'green'))
+ -- forward : 0.00
+ -- right : 0.00
+ -- None : 0.00
+ -- left : 0.98
+
+(('directions', 'left'), ('right', 'left'), ('left', None), ('onccoming', None), ('light', 'green'))
+ -- forward : 0.00
+ -- right : 0.00
+ -- None : 0.00
+ -- left : 0.00
+
+(('directions', 'left'), ('right', None), ('left', None), ('onccoming', 'right'), ('light', 'red'))
+ -- forward : 0.00
+ -- right : 0.71
+ -- None : 0.00
+ -- left : 0.00
+
+(('directions', 'forward'), ('right', 'forward'), ('left', 'right'), ('onccoming', 'left'), ('light', 'green'))
+ -- forward : 0.00
+ -- right : 0.00
+ -- None : 0.00
+ -- left : 0.00
+
+(('directions', 'right'), ('right', None), ('left', None), ('onccoming', 'right'), ('light', 'green'))
+ -- forward : 0.03
+ -- right : 4.01
+ -- None : 0.00
+ -- left : 0.00
+
+(('directions', 'forward'), ('right', 'left'), ('left', 'forward'), ('onccoming', None), ('light', 'green'))
+ -- forward : 0.00
+ -- right : 0.00
+ -- None : 0.00
+ -- left : 0.80
+
+(('directions', 'left'), ('right', 'forward'), ('left', None), ('onccoming', None), ('light', 'red'))
+ -- forward : -20.36
+ -- right : 0.00
+ -- None : 0.00
+ -- left : 0.00
+
+(('directions', 'left'), ('right', 'forward'), ('left', 'forward'), ('onccoming', 'left'), ('light', 'green'))
+ -- forward : 0.74
+ -- right : 0.00
+ -- None : 0.00
+ -- left : 0.00
+
+(('directions', 'left'), ('right', None), ('left', 'left'), ('onccoming', 'forward'), ('light', 'red'))
+ -- forward : 0.00
+ -- right : 0.00
+ -- None : 0.00
+ -- left : -4.67
+
+(('directions', 'forward'), ('right', None), ('left', 'right'), ('onccoming', 'left'), ('light', 'green'))
+ -- forward : 0.00
+ -- right : 0.00
+ -- None : 0.00
+ -- left : 0.66
+
+(('directions', 'left'), ('right', 'left'), ('left', 'left'), ('onccoming', 'left'), ('light', 'red'))
+ -- forward : 0.00
+ -- right : 0.00
+ -- None : 0.81
+ -- left : 0.00
+
+(('directions', 'left'), ('right', None), ('left', None), ('onccoming', 'left'), ('light', 'red'))
+ -- forward : 0.00
+ -- right : 0.51
+ -- None : 4.47
+ -- left : -15.60
+
+(('directions', 'forward'), ('right', None), ('left', 'right'), ('onccoming', 'forward'), ('light', 'green'))
+ -- forward : 0.00
+ -- right : 0.12
+ -- None : 0.00
+ -- left : 0.00
+
+(('directions', 'forward'), ('right', 'left'), ('left', None), ('onccoming', None), ('light', 'red'))
+ -- forward : 0.00
+ -- right : 1.25
+ -- None : 0.00
+ -- left : 0.00
+
+(('directions', 'left'), ('right', 'left'), ('left', None), ('onccoming', 'right'), ('light', 'green'))
+ -- forward : 0.00
+ -- right : 0.00
+ -- None : 0.00
+ -- left : 1.24
+
+(('directions', 'forward'), ('right', None), ('left', None), ('onccoming', None), ('light', 'green'))
+ -- forward : 7.24
+ -- right : 0.42
+ -- None : -2.24
+ -- left : 1.39
+
+(('directions', 'left'), ('right', None), ('left', 'forward'), ('onccoming', None), ('light', 'red'))
+ -- forward : -19.94
+ -- right : 0.00
+ -- None : 0.00
+ -- left : -19.96
+
+(('directions', 'right'), ('right', 'forward'), ('left', None), ('onccoming', 'right'), ('light', 'red'))
+ -- forward : 0.00
+ -- right : 0.00
+ -- None : 0.00
+ -- left : -19.70
+
+(('directions', 'right'), ('right', 'right'), ('left', None), ('onccoming', 'left'), ('light', 'green'))
+ -- forward : 0.89
+ -- right : 0.00
+ -- None : 0.00
+ -- left : 0.00
+
+(('directions', 'right'), ('right', None), ('left', None), ('onccoming', 'forward'), ('light', 'green'))
+ -- forward : 0.99
+ -- right : 0.00
+ -- None : -2.42
+ -- left : 0.00
+
+(('directions', 'forward'), ('right', 'left'), ('left', None), ('onccoming', 'left'), ('light', 'green'))
+ -- forward : 0.00
+ -- right : 0.02
+ -- None : 0.00
+ -- left : 0.14
+
+(('directions', 'forward'), ('right', 'left'), ('left', 'left'), ('onccoming', None), ('light', 'red'))
+ -- forward : 0.00
+ -- right : 0.00
+ -- None : 0.00
+ -- left : 0.00
+
+(('directions', 'forward'), ('right', None), ('left', None), ('onccoming', 'forward'), ('light', 'red'))
+ -- forward : 0.00
+ -- right : 0.58
+ -- None : 4.19
+ -- left : -4.96
+
+(('directions', 'left'), ('right', 'left'), ('left', 'left'), ('onccoming', 'forward'), ('light', 'red'))
+ -- forward : 0.00
+ -- right : 0.00
+ -- None : 1.10
+ -- left : 0.00
+
+(('directions', 'left'), ('right', 'forward'), ('left', 'forward'), ('onccoming', 'left'), ('light', 'red'))
+ -- forward : 0.00
+ -- right : 0.00
+ -- None : 0.00
+ -- left : 0.00
+
+(('directions', 'left'), ('right', 'forward'), ('left', None), ('onccoming', None), ('light', 'green'))
+ -- forward : 0.00
+ -- right : 0.19
+ -- None : 0.00
+ -- left : 0.00
+
+(('directions', 'right'), ('right', None), ('left', 'left'), ('onccoming', None), ('light', 'red'))
+ -- forward : 0.00
+ -- right : 0.00
+ -- None : 0.00
+ -- left : -5.20
+
+(('directions', 'forward'), ('right', 'forward'), ('left', None), ('onccoming', 'left'), ('light', 'green'))
+ -- forward : 0.00
+ -- right : 0.00
+ -- None : 0.00
+ -- left : 0.00
+
+(('directions', 'forward'), ('right', 'forward'), ('left', None), ('onccoming', None), ('light', 'green'))
+ -- forward : 1.33
+ -- right : 0.00
+ -- None : 0.00
+ -- left : 0.18
+
+(('directions', 'right'), ('right', 'left'), ('left', 'right'), ('onccoming', None), ('light', 'red'))
+ -- forward : 0.00
+ -- right : 0.00
+ -- None : 0.00
+ -- left : -5.17
+
+(('directions', 'forward'), ('right', None), ('left', None), ('onccoming', 'left'), ('light', 'red'))
+ -- forward : 0.00
+ -- right : 0.00
+ -- None : 1.99
+ -- left : -5.25
+
